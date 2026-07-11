@@ -1,21 +1,4 @@
 -
-  let algolia = 'undefined'
-  if (theme.search.use === 'algolia_search') {
-    const { ALGOLIA_APP_ID, ALGOLIA_API_KEY, ALGOLIA_INDEX_NAME } = process.env
-    const { appId, applicationID, apiKey, indexName } = config.algolia
-    algolia = JSON.stringify({
-      appId: ALGOLIA_APP_ID || appId || applicationID,
-      apiKey: ALGOLIA_API_KEY || apiKey,
-      indexName: ALGOLIA_INDEX_NAME || indexName,
-      hitsPerPage: theme.search.algolia_search.hitsPerPage,
-      // search languages
-      languages: {
-        hits_empty: _p("search.algolia_search.hits_empty"),
-        hits_stats: _p("search.algolia_search.hits_stats"),
-      }
-    })
-  }
-
   let localSearch = 'undefined'
   if (theme.search.use === 'local_search') {
     const { CDN, preload, top_n_per_article, pagination, unescape } = theme.search.local_search
@@ -86,7 +69,6 @@
 script.
   const GLOBAL_CONFIG = {
     root: '!{config.root}',
-    algolia: !{algolia},
     localSearch: !{localSearch},
     translate: !{translate},
     highlight: !{highlight},

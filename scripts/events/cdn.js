@@ -33,11 +33,6 @@ hexo.extend.filter.register('before_generate', () => {
       name: 'hexo-theme-butterfly',
       file: 'js/search/local-search.js',
       version
-    },
-    algolia_js: {
-      name: 'hexo-theme-butterfly',
-      file: 'js/search/algolia.js',
-      version
     }
   }
 

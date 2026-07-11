@@ -45,13 +45,12 @@
         color: $search-color
 
   .local-search-input,
-  #algolia-search-input
+  .google-search-input
     margin: 0 auto
     max-width: 100%
     width: 100%
 
-    input,
-    .ais-SearchBox-input
+    input
       padding: 5px 14px
       width: 100%
       outline: none
@@ -64,15 +63,28 @@
       &::placeholder
         color: var(--text-color)
 
-  .search-result-list,
-  .ais-Hits-list
+  .google-search-input
+    display: flex
+    gap: 10px
+
+    .google-search-submit
+      flex-shrink: 0
+      width: 42px
+      border-radius: 50%
+      background: var(--btn-bg)
+      color: var(--btn-color)
+      transition: background .2s ease
+
+      &:hover
+        background: var(--btn-hover-color)
+
+  .search-result-list
     overflow-y: overlay
     margin: 0 -20px
     padding: 0 22px
     max-height: calc(80vh - 220px)
 
-    .local-search-hit-item,
-    .ais-Hits-item
+    .local-search-hit-item
       display: flex
       align-items: flex-start
       margin: 3px 0
@@ -109,12 +121,10 @@
         &:hover
           color: $search-color
 
-      .search-result-title,
-      .algolia-hits-item-title
+      .search-result-title
         font-weight: 600
 
-      .search-result,
-      .algolia-hit-item-content
+      .search-result
         margin: 0 0 8px
         word-break: break-all
         font-size: .9em
@@ -202,8 +212,7 @@
   display: none
   background: rgba($dark-black, .6)
 
-.search-result-stats,
-.ais-Stats-text
+.search-result-stats
   margin: 15px 0 0
   color: var(--text-color)
   text-align: center
@@ -234,7 +243,5 @@
   to
     transform: rotate(360deg)
 
-if hexo-config('search.use') == 'algolia_search'
-  @require 'algolia'
-else if hexo-config('search.use') == 'local_search'
+if hexo-config('search.use') == 'local_search'
   @require 'local-search'

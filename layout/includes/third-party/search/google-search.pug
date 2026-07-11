@@ -1,0 +1,80 @@
+-
+  let googleSearchSite = ''
+  try {
+    googleSearchSite = new URL(config.url).hostname
+  } catch (error) {}
+
+#google-search
+  .search-dialog
+    nav.search-nav
+      span.search-dialog-title= _p('search.title')
+      button.search-close-button(type='button' aria-label='Close search')
+        i.fas.fa-times
+
+    form.google-search-input
+      input(type='search' placeholder=theme.search.placeholder || _p('search.input_placeholder') autocomplete='off' aria-label='Search')
+      button.google-search-submit(type='submit' aria-label='Search with Google')
+        i.fab.fa-google
+
+  #search-mask
+
+  script.
+    (() => {
+      const configuredSite = !{JSON.stringify(googleSearchSite)}
+      const searchRoot = document.getElementById('google-search')
+      const searchDialog = searchRoot.querySelector('.search-dialog')
+      const searchMask = searchRoot.querySelector('#search-mask')
+      const form = searchRoot.querySelector('form')
+      const input = form.querySelector('input')
+
+      const fixSafariHeight = () => {
+        if (window.innerWidth < 768) {
+          searchDialog.style.setProperty('--search-height', `${window.innerHeight}px`)
+        }
+      }
+
+      const closeSearch = () => {
+        btf.overflowPaddingR.remove()
+        btf.animateOut(searchDialog, 'search_close .5s')
+        btf.animateOut(searchMask, 'to_hide 0.5s')
+        window.removeEventListener('resize', fixSafariHeight)
+      }
+
+      const handleKeydown = event => {
+        if (event.code !== 'Escape') return
+        closeSearch()
+        document.removeEventListener('keydown', handleKeydown)
+      }
+
+      const openSearch = () => {
+        btf.overflowPaddingR.add()
+        btf.animateIn(searchMask, 'to_show 0.5s')
+        btf.animateIn(searchDialog, 'titleScale 0.5s')
+        setTimeout(() => input.focus(), 300)
+        document.addEventListener('keydown', handleKeydown)
+        fixSafariHeight()
+        window.addEventListener('resize', fixSafariHeight)
+      }
+
+      const bindSearchButton = () => {
+        btf.addEventListenerPjax(document.querySelector('#search-button > .search'), 'click', openSearch)
+      }
+
+      form.addEventListener('submit', event => {
+        event.preventDefault()
+        const keywords = input.value.trim()
+        if (!keywords) return
+        const site = configuredSite || location.hostname
+        const params = new URLSearchParams({ q: `site:${site} ${keywords}` })
+        window.open(`https://www.google.com/search?${params}`, '_blank', 'noopener,noreferrer')
+      })
+
+      searchRoot.querySelector('.search-close-button').addEventListener('click', closeSearch)
+      searchMask.addEventListener('click', closeSearch)
+      bindSearchButton()
+
+      window.addEventListener('pjax:complete', () => {
+        !btf.isHidden(searchMask) && closeSearch()
+        bindSearchButton()
+      })
+    })()

@@ -268,9 +268,6 @@ module.exports = {
   search: {
     use: null,
     placeholder: null,
-    algolia_search: {
-      hitsPerPage: 6
-    },
     local_search: {
       preload: false,
       top_n_per_article: 1,
@@ -280,12 +277,6 @@ module.exports = {
         hitsPerPage: 8
       },
       CDN: null
-    },
-    docsearch: {
-      appId: null,
-      apiKey: null,
-      indexName: null,
-      option: null
     }
   },
   share: {

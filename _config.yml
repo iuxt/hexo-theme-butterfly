@@ -472,15 +472,10 @@ math:
 # --------------------------------------
 
 search:
-  # Choose: algolia_search / local_search / docsearch
+  # Choose: local_search / google_search
   # leave it empty if you don't need search
   use:
   placeholder:
-
-  # Algolia Search
-  algolia_search:
-    # Number of search results per page
-    hitsPerPage: 6
 
   # Local Search
   local_search:
@@ -496,14 +491,6 @@ search:
       # Number of search results per page
       hitsPerPage: 8
     CDN:
-
-  # Docsearch
-  # https://docsearch.algolia.com/
-  docsearch:
-    appId:
-    apiKey:
-    indexName:
-    option:
 
 # --------------------------------------
 # Share System
@@ -1082,8 +1069,6 @@ CDN:
   option:
     # abcjs_basic_js:
     # activate_power_mode:
-    # algolia_js:
-    # algolia_search:
     # aplayer_css:
     # aplayer_js:
     # artalk_css:
@@ -1098,8 +1083,6 @@ CDN:
     # clickShowText:
     # disqusjs:
     # disqusjs_css:
-    # docsearch_css:
-    # docsearch_js:
     # egjs_infinitegrid:
     # fancybox:
     # fancybox_css:
