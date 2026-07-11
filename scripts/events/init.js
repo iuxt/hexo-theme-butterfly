@@ -53,27 +53,10 @@ function processCommentConfig (themeConfig) {
     return
   }
 
-  let { use } = comments
-
-  if (!Array.isArray(use)) {
-    use = typeof use === 'string' ? use.split(',') : [use]
-  }
-
-  use = use
-    .map(item => {
-      if (typeof item !== 'string') return item
-      return item.trim().toLowerCase().replace(/\b[a-z]/g, s => s.toUpperCase())
-    })
-    .filter(Boolean)
-
-  // Handle Disqus and Disqusjs conflict
-  if (use.includes('Disqus') && use.includes('Disqusjs')) {
-    hexo.log.warn('Disqus and Disqusjs conflict detected, keeping only the first one')
-    hexo.log.warn('檢測到 Disqus 和 Disqusjs 衝突，只保留第一個')
-    use = [use[0]]
-  }
-
-  themeConfig.comments.use = use
+  const use = Array.isArray(comments.use) ? comments.use : [comments.use]
+  themeConfig.comments.use = use.some(item => typeof item === 'string' && item.trim().toLowerCase() === 'giscus')
+    ? ['Giscus']
+    : []
 }
 
 hexo.extend.filter.register('before_generate', () => {

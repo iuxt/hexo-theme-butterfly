@@ -1,4 +1,4 @@
-- const { use, lazyload } = theme.comments
+- const { lazyload } = theme.comments
 - const { repo, repo_id, category_id, light_theme, dark_theme, js, option } = theme.giscus
 - const giscusUrl = js || 'https://giscus.app/client.js'
 - const giscusOriginUrl = new URL(giscusUrl).origin
@@ -67,16 +67,10 @@ script.
     btf.addGlobalFn('themeChange', changeGiscusTheme, 'giscus')
 
     if (isShuoshuo) {
-      '!{use[0]}' === 'Giscus'
-        ? window.shuoshuoComment = { loadComment: loadGiscus }
-        : window.loadOtherComment = loadGiscus
+      window.shuoshuoComment = { loadComment: loadGiscus }
       return
     }
 
-    if ('!{use[0]}' === 'Giscus' || !!{lazyload}) {
-      if (!{lazyload}) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
-      else loadGiscus()
-    } else {
-      window.loadOtherComment = loadGiscus
-    }
+    if (!{lazyload}) btf.loadComment(document.getElementById('giscus-wrap'), loadGiscus)
+    else loadGiscus()
   })()

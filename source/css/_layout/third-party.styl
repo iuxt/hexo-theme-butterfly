@@ -1,54 +1,3 @@
-#vcomment
-  font-size: 1.1em
-
-  .vbtn
-    border: none
-    background: var(--btn-bg)
-    color: var(--btn-color)
-
-    &:hover
-      background: var(--btn-hover-color)
-
-  .vimg
-    transition: all .3s
-
-    &:hover
-      transform: rotate(360deg)
-
-  .vcards .vcard .vcontent.expand
-    &:before,
-    &:after
-      z-index: 22
-
-#waline-wrap
-  --waline-font-size: 1.1em
-  --waline-theme-color: $button-bg
-  --waline-active-color: $button-hover-color
-
-  .wl-comment-actions > button:not(last-child)
-    padding-right: 4px
-
-if hexo-config('valine.bg')
-  #vcomment
-    textarea
-      background: url(hexo-config('valine.bg')) 100% 100% no-repeat
-
-      &:focus
-        background-image: none
-
-if hexo-config('waline.bg')
-  #waline-wrap
-    textarea
-      background: url(hexo-config('waline.bg')) 100% 100% no-repeat
-
-      &:focus
-        background-image: none
-
-.twikoo
-  .tk-content
-    p
-      margin: 3px 0
-
 .fireworks
   position: fixed
   top: 0
@@ -143,15 +92,6 @@ if hexo-config('chartjs.enable')
 
     canvas
       display: inline-block !important
-
-.utterances,
-.fb-comments iframe
-  width: 100% !important
-
-#gitalk-container
-  .gt-meta
-    margin: 0 0 .8em
-    padding: 6px 0 16px
 
 if hexo-config('math.use')
   .katex-display

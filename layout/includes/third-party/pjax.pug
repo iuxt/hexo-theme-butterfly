@@ -6,13 +6,12 @@ if theme.pjax.exclude
 - let pjaxSelectors = ['head > title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax']
 
 - let choose = theme.comments.use
-if choose
-  if choose.includes('Livere') || choose.includes('Utterances') || choose.includes('Giscus')
-    - pjaxSelectors.unshift('link[rel="canonical"]')
-    if theme.Open_Graph_meta.enable
-      - pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]', 'meta[property="og:description"]')
-    else
-      - pjaxSelectors.unshift('meta[name="description"]')
+if choose && choose.includes('Giscus')
+  - pjaxSelectors.unshift('link[rel="canonical"]')
+  if theme.Open_Graph_meta.enable
+    - pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]', 'meta[property="og:description"]')
+  else
+    - pjaxSelectors.unshift('meta[name="description"]')
 
 script(src=url_for(theme.asset.pjax) defer)
 script.

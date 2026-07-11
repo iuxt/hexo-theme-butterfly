@@ -20,3 +20,18 @@ test('search exposes only local and Google providers', () => {
   assert.match(googleTemplate, /noopener,noreferrer/)
   assert.match(googleTemplate, /\.trim\(\)/)
 })
+
+test('comments expose only the Giscus implementation', () => {
+  const commentsDir = path.join(root, 'layout/includes/third-party/comments')
+  assert.deepEqual(fs.readdirSync(commentsDir).sort(), ['giscus.pug', 'index.pug', 'js.pug'])
+  assert.equal(fs.existsSync(path.join(root, 'layout/includes/third-party/card-post-count')), false)
+  assert.equal(fs.existsSync(path.join(root, 'layout/includes/third-party/newest-comments')), false)
+
+  const container = read('layout/includes/third-party/comments/index.pug')
+  assert.match(container, /#giscus-wrap/)
+  assert.doesNotMatch(container, /\beach\b|\bcase\b/)
+
+  const loader = read('layout/includes/third-party/comments/js.pug')
+  assert.match(loader, /comments\/giscus/)
+  assert.doesNotMatch(loader, /\beach\b|\bcase\b/)
+})

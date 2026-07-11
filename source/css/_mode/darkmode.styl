@@ -121,12 +121,8 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
         box-shadow: 0 5px 6px -5px rgba(133, 133, 133, 0)
 
     #post-comment
-      .comment-switch
-        if hexo-config('comments.text')
-          background: #2c2c2c !important
-
-        #switch-btn
-          filter: brightness(.8)
+      .comment-provider
+        background: #2c2c2c !important
 
     // hide-tags
     .hide-button,
@@ -148,35 +144,6 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     #aside-content .aside-list > .aside-list-item:not(:last-child)
       border-bottom: 1px dashed alpha(#FFFFFF, .1)
 
-    // Gitalk
-    #gitalk-container
-      filter: brightness(.8)
-
-      svg
-        fill: alpha(#FFFFFF, .9) !important
-
-    // Disqusjs 反代模式下的適配
-    #disqusjs
-      #dsqjs
-        &:hover,
-        &:focus,
-        .dsqjs-tab-active,
-        .dsqjs-no-comment
-          color: alpha(#FFFFFF, .7)
-
-        .dsqjs-order-label
-          background-color: lighten(#121212, 5)
-
-        .dsqjs-post-body
-          color: alpha(#FFFFFF, .7)
-
-          code,
-          pre
-            background: #2c2c2c
-
-          blockquote
-            color: alpha(#FFFFFF, .7)
-
     #artitalk_main #lazy
       background: #121212
 
@@ -186,20 +153,3 @@ if hexo-config('darkmode.enable') || hexo-config('display_mode') == 'dark'
     #card-toc
       +maxWidth900()
         background: lighten(#121212, 5)
-
-    // artalk
-    .artalk.atk-dark-mode,
-    .atk-layer-wrap.atk-dark-mode
-      --at-color-font: alpha(#FFFFFF, .7)
-      --at-color-meta: alpha(#FFFFFF, .7)
-      --at-color-grey: alpha(#FFFFFF, .7)
-
-    .atk-send-btn,
-    .atk-badge
-      color: alpha(#FFFFFF, .7) !important
-
-    // waline
-    #waline-wrap
-      --waline-color: alpha(#FFFFFF, .7)
-      --waline-dark-grey: alpha(#FFFFFF, .7)
-      --waline-info-color: alpha(#FFFFFF, .5)

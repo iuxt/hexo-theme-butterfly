@@ -162,13 +162,6 @@ module.exports = {
       sort: 'date',
       sort_order: null
     },
-    card_newest_comments: {
-      enable: false,
-      sort_order: null,
-      limit: 6,
-      storage: 10,
-      avatar: true
-    },
     card_categories: {
       enable: true,
       limit: 8,
@@ -291,65 +284,7 @@ module.exports = {
   comments: {
     use: null,
     text: true,
-    lazyload: false,
-    count: false,
-    card_post_count: false
-  },
-  disqus: {
-    shortname: null,
-    apikey: null
-  },
-  disqusjs: {
-    shortname: null,
-    apikey: null,
-    option: null
-  },
-  livere: {
-    uid: null
-  },
-  gitalk: {
-    client_id: null,
-    client_secret: null,
-    repo: null,
-    owner: null,
-    admin: null,
-    option: null
-  },
-  valine: {
-    appId: null,
-    appKey: null,
-    avatar: 'monsterid',
-    serverURLs: null,
-    bg: null,
-    visitor: false,
-    option: null
-  },
-  waline: {
-    serverURL: null,
-    bg: null,
-    pageview: false,
-    option: null
-  },
-  utterances: {
-    repo: null,
-    issue_term: 'pathname',
-    light_theme: 'github-light',
-    dark_theme: 'photon-dark',
-    js: null,
-    option: null
-  },
-  facebook_comments: {
-    app_id: null,
-    user_id: null,
-    pageSize: 10,
-    order_by: 'social',
-    lang: 'en_US'
-  },
-  twikoo: {
-    envId: null,
-    region: null,
-    visitor: false,
-    option: null
+    lazyload: false
   },
   giscus: {
     repo: null,
@@ -358,17 +293,6 @@ module.exports = {
     light_theme: 'light',
     dark_theme: 'dark',
     js: null,
-    option: null
-  },
-  remark42: {
-    host: null,
-    siteId: null,
-    option: null
-  },
-  artalk: {
-    server: null,
-    site: null,
-    visitor: false,
     option: null
   },
   chat: {

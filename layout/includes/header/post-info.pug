@@ -1,4 +1,3 @@
-- let comments = theme.comments
 #post-info
   h1.post-title= page.title || _p('no_title')
     if theme.post_edit.enable
@@ -70,80 +69,4 @@
             span#busuanzi_value_page_pv
               i.fa-solid.fa-spinner.fa-spin
 
-      - const commentUse = comments.use && comments.use[0]
-      if page.comments !== false && commentUse && !comments.lazyload
-        if commentUse === 'Valine' && theme.valine.visitor
-          +pvBlock(url_for(page.path), 'leancloud_visitors', page.title)
-            span.leancloud-visitors-count
-              i.fa-solid.fa-spinner.fa-spin
-        else if commentUse === 'Waline' && theme.waline.pageview
-          +pvBlock('', '', '')
-            span.waline-pageview-count(data-path=url_for(page.path))
-              i.fa-solid.fa-spinner.fa-spin
-        else if commentUse === 'Twikoo' && theme.twikoo.visitor
-          +pvBlock('', '', '')
-            span#twikoo_visitors
-              i.fa-solid.fa-spinner.fa-spin
-        else if commentUse === 'Artalk' && theme.artalk.visitor
-          +pvBlock('', '', '')
-            span#ArtalkPV
-              i.fa-solid.fa-spinner.fa-spin
-        else
-          +otherPV()
-      else
-        +otherPV()
-
-      if comments.count && !comments.lazyload && page.comments !== false && comments.use
-        - var whichCount = comments.use[0]
-
-        mixin countBlock
-          span.post-meta-separator |
-          span.post-meta-commentcount
-            i.far.fa-comments.fa-fw.post-meta-icon
-            span.post-meta-label= _p('post.comments') + ':'
-            if block
-              block
-
-        case whichCount
-          when 'Disqus'
-            +countBlock
-              a.disqus-comment-count(href=full_url_for(page.path) + '#post-comment')
-                i.fa-solid.fa-spinner.fa-spin
-          when 'Disqusjs'
-            +countBlock
-              a.disqusjs-comment-count(href=full_url_for(page.path) + '#post-comment')
-                i.fa-solid.fa-spinner.fa-spin
-          when 'Valine'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment' itemprop="discussionUrl")
-                span.valine-comment-count(data-xid=url_for(page.path) itemprop="commentCount")
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Waline'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span.waline-comment-count(data-path=url_for(page.path))
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Gitalk'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span.gitalk-comment-count
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Twikoo'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span#twikoo-count
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Facebook Comments'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span.fb-comments-count(data-href=urlNoIndex())
-          when 'Remark42'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span.remark42__counter(data-url=urlNoIndex())
-                  i.fa-solid.fa-spinner.fa-spin
-          when 'Artalk'
-            +countBlock
-              a(href=url_for(page.path) + '#post-comment')
-                span#ArtalkCount
-                  i.fa-solid.fa-spinner.fa-spin
+      +otherPV()

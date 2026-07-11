@@ -37,7 +37,6 @@
               ele.classList.remove('no-comment')
               ele.innerHTML = commentDiv
               const key = `${location.pathname.replace(/\/$/, '')}?key=${ele.getAttribute('data-key')}`
-              btf.switchComments(ele, key)
               shuoshuoComment.loadComment && shuoshuoComment.loadComment(ele, key)
             }
           }
