@@ -138,7 +138,7 @@
                 <div class="container">
                   <div class="shuoshuo-item-header">
                     <div class="shuoshuo-avatar">
-                      <img class="no-lightbox" src="${item.avatar || '!{url_for(theme.avatar.img)}'}">
+                      <img src="${item.avatar || '!{url_for(theme.avatar.img)}'}">
                     </div>
                     <div class="shuoshuo-info">
                       <div class="shuoshuo-author">${item.author || '!{config.author}'}</div>
@@ -161,7 +161,6 @@
           container.innerHTML = content
 
           window.lazyLoadInstance && window.lazyLoadInstance.update()
-          btf.loadLightbox(document.querySelectorAll('#article-container img:not(.no-lightbox)'))
         }
 
         const renderNavigation = () => {

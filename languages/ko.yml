@@ -89,19 +89,12 @@ rightside:
   scroll_to_comment: 댓글로 이동
   setting: 설정
   aside: 단일/이중 열 전환
-  chat: 채팅
 
 copy_copyright:
   author: 작성자
   link: 링크
   source: 출처
   info: 저작권은 작성자에게 있습니다. 상업적 사용을 위해서는 작성자의 허가를 받아야 하며, 비상업적 사용 시에는 출처를 명시해 주세요.
-
-Snackbar:
-  chs_to_cht: 번체로 전환되었습니다.
-  cht_to_chs: 간체로 전환되었습니다.
-  day_to_night: 다크 모드로 전환되었습니다.
-  night_to_day: 라이트 모드로 전환되었습니다.
 
 loading: 로딩 중...
 load_more: 더 보기

@@ -101,32 +101,23 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 ### 💬 Social Interaction
 - [x] **Comments** - Giscus comments with lazy loading and theme synchronization
 - [x] **Share Features** - Sharejs/Addtoany sharing components
-- [x] **Live Chat** - Chatra/Tidio/Crisp instant messaging
 
 ### 📊 Analytics & Statistics
 - [x] **Visit Statistics** - Busuanzi counter
-- [x] **Site Analytics** - Google Analytics/Baidu Analytics/Cloudflare Analytics/Microsoft Clarity/Umami
-- [x] **Webmaster Verification** - Major search engine verification
-- [x] **Ad Support** - Google AdSense/custom ad slots
 
 ### 🎪 Visual Effects
 - [x] **Typing Effects** - activate_power_mode animations
-- [x] **Background Effects** - Static ribbons/dynamic ribbons/floating ribbons/Canvas Nest
-- [x] **Mouse Effects** - Fireworks/hearts/text click effects
 - [x] **Loading Animations** - Preloader and pace.js progress bars
-- [x] **Image Effects** - Medium Zoom/Fancybox image lightbox
 - [x] **Lazy Loading** - Image lazy loading optimization
 
 ### 🛠️ Advanced Features
 - [x] **PWA Support** - Progressive Web App
 - [x] **Copy Protection** - Disable text copying/copyright info append
 - [x] **Theme Customization** - Custom site color schemes
-- [x] **Chart Support** - Mermaid flowcharts/Chart.js data charts
-- [x] **Music Notation** - ABCJS music notation support
+- [x] **Chart Support** - Mermaid flowcharts
 - [x] **Music Player** - APlayer/Meting music playback
 - [x] **Article Series** - Series article organization
 - [x] **Instantpage** - Page preloading acceleration
-- [x] **Snackbar** - Elegant notification messages
 
 ## 🤝 Contributors
 

@@ -101,32 +101,23 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 ### 💬 社交互動
 - [x] **評論系統** - 支援延遲載入與主題同步的 Giscus 評論
 - [x] **分享功能** - Sharejs/Addtoany 分享套件
-- [x] **線上客服** - Chatra/Tidio/Crisp 即時聊天
 
 ### 📊 數據分析
 - [x] **訪問統計** - 不蒜子計數器
-- [x] **網站分析** - Google Analytics/百度統計/Cloudflare Analytics/Microsoft Clarity/Umami
-- [x] **站長驗證** - 各大搜尋引擎驗證
-- [x] **廣告支援** - Google AdSense/自訂廣告位
 
 ### 🎪 視覺效果
 - [x] **打字特效** - activate_power_mode 動畫
-- [x] **背景特效** - 靜態彩帶/動態彩帶/飄帶效果/Canvas Nest
-- [x] **滑鼠特效** - 煙花/愛心/文字點擊效果
 - [x] **載入動畫** - Preloader 和 pace.js 進度條
-- [x] **圖片效果** - Medium Zoom/Fancybox 圖片燈箱
 - [x] **懶載入** - 圖片延遲載入優化
 
 ### 🛠️ 進階功能
 - [x] **PWA 支援** - 漸進式網頁應用
 - [x] **複製保護** - 可關閉文字複製/版權資訊追加
 - [x] **主題定製** - 自訂網站配色方案
-- [x] **圖表支援** - Mermaid 流程圖/Chart.js 數據圖表
-- [x] **音樂符號** - ABCJS 音樂記譜法支援
+- [x] **圖表支援** - Mermaid 流程圖
 - [x] **音樂播放器** - APlayer/Meting 音樂播放功能
 - [x] **系列文章** - 系列文章組織功能
 - [x] **Instantpage** - 頁面預載入加速
-- [x] **Snackbar** - 優雅的提示訊息
 
 ## 🤝 貢獻者
 

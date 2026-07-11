@@ -295,54 +295,6 @@ module.exports = {
     js: null,
     option: null
   },
-  chat: {
-    use: null,
-    rightside_button: false,
-    button_hide_show: false
-  },
-  chatra: {
-    id: null
-  },
-  tidio: {
-    public_key: null
-  },
-  crisp: {
-    website_id: null
-  },
-  google_tag_manager: {
-    tag_id: null,
-    domain: 'https://www.googletagmanager.com'
-  },
-  baidu_analytics: null,
-  google_analytics: null,
-  cloudflare_analytics: null,
-  microsoft_clarity: null,
-  umami_analytics: {
-    enable: false,
-    serverURL: null,
-    script_name: 'script.js',
-    website_id: null,
-    option: null,
-    UV_PV: {
-      site_uv: false,
-      site_pv: false,
-      page_pv: false,
-      token: null
-    }
-  },
-  google_adsense: {
-    enable: false,
-    auto_ads: true,
-    js: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js',
-    client: null,
-    enable_page_level_ads: true
-  },
-  ad: {
-    index: null,
-    aside: null,
-    post: null
-  },
-  site_verification: null,
   category_ui: null,
   tag_ui: null,
   rounded_corners_ui: true,
@@ -385,52 +337,11 @@ module.exports = {
     shake: true,
     mobile: false
   },
-  canvas_ribbon: {
-    enable: false,
-    size: 150,
-    alpha: 0.6,
-    zIndex: -1,
-    click_to_change: false,
-    mobile: false
-  },
-  canvas_fluttering_ribbon: {
-    enable: false,
-    mobile: false
-  },
-  canvas_nest: {
-    enable: false,
-    color: '0,0,255',
-    opacity: 0.7,
-    zIndex: -1,
-    count: 99,
-    mobile: false
-  },
-  fireworks: {
-    enable: false,
-    zIndex: 9999,
-    mobile: false
-  },
-  click_heart: {
-    enable: false,
-    mobile: false
-  },
-  clickShowText: {
-    enable: false,
-    text: null,
-    fontSize: '15px',
-    random: false,
-    mobile: false
-  },
-  lightbox: null,
   series: {
     enable: false,
     orderBy: 'title',
     order: 1,
     number: true
-  },
-  abcjs: {
-    enable: false,
-    per_page: true
   },
   mermaid: {
     enable: false,
@@ -441,21 +352,6 @@ module.exports = {
     },
     open_in_new_tab: true,
     zoom_pan: true
-  },
-  chartjs: {
-    enable: false,
-    fontColor: {
-      light: 'rgba(0, 0, 0, 0.8)',
-      dark: 'rgba(255, 255, 255, 0.8)'
-    },
-    borderColor: {
-      light: 'rgba(0, 0, 0, 0.1)',
-      dark: 'rgba(255, 255, 255, 0.2)'
-    },
-    scale_ticks_backdropColor: {
-      light: 'transparent',
-      dark: 'transparent'
-    }
   },
   note: {
     style: 'flat',
@@ -470,12 +366,6 @@ module.exports = {
   aplayerInject: {
     enable: false,
     per_page: true
-  },
-  snackbar: {
-    enable: false,
-    position: 'bottom-left',
-    bg_light: '#49b1f5',
-    bg_dark: '#1f1f1f'
   },
   instantpage: false,
   lazyload: {

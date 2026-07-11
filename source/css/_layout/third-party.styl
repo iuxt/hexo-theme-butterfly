@@ -1,17 +1,3 @@
-.fireworks
-  position: fixed
-  top: 0
-  left: 0
-  z-index: $fireworks-zIndex
-  pointer-events: none
-
-.medium-zoom-image--opened
-  z-index: 99999 !important
-  margin: 0 !important
-
-.medium-zoom-overlay
-  z-index: 99999 !important
-
 if hexo-config('mermaid.enable')
   .mermaid-wrap
     position: relative
@@ -66,32 +52,6 @@ if hexo-config('mermaid.enable')
   if hexo-config('mermaid.code_write')
     pre > code.mermaid
       display: none
-
-if hexo-config('chartjs.enable')
-  .chartjs-container
-    display: flex
-    flex-direction: column
-    justify-content: center
-    align-items: center
-    margin: 0 0 20px
-    text-align: center
-    gap: 20px
-
-    +maxWidth600()
-      .chartjs-wrap
-        width: 100% !important
-
-    &.chartjs-abreast
-      flex-direction: row
-
-      +maxWidth600()
-        flex-direction: column
-
-    .chartjs-wrap
-      width: -webkit-fill-available
-
-    canvas
-      display: inline-block !important
 
 if hexo-config('math.use')
   .katex-display
@@ -152,19 +112,3 @@ if hexo-config('math.use')
 
           &:before
             content: none
-
-.snackbar-container.snackbar-css
-  addBorderRadius(5)
-  opacity: .85 !important
-
-.abc-music-sheet
-  margin: 0 0 20px
-  opacity: 0
-  transition: opacity .3s
-
-  &.abcjs-container
-    opacity: 1
-
-+maxWidth768()
-  .fancybox__toolbar__column.is-middle
-    display: none

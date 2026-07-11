@@ -89,19 +89,12 @@ rightside:
   scroll_to_comment: コメントへ移動
   setting: 設定
   aside: シングルカラムとダブルカラムの切り替え
-  chat: チャット
 
 copy_copyright:
   author: 著者
   link: リンク
   source: ソース
   info: 著作権は著者に帰属します。商業的利用の場合は著者に連絡して許可を得てください。非商業的利用の場合は出典を明記してください。
-
-Snackbar:
-  chs_to_cht: 繁体字に切り替えました
-  cht_to_chs: 簡体字に切り替えました
-  day_to_night: ダークモードに切り替えました
-  night_to_day: ライトモードに切り替えました
 
 loading: ローディング中...
 load_more: もっと見る
