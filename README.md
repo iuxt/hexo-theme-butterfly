@@ -89,7 +89,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **Tag Plugins** - Rich tag plugin support
 
 ### 🔍 Search & Navigation
-- [x] **Multiple Search Options** - Algolia Search / Local Search / Docsearch
+- [x] **Search Options** - Local Search / Google Site Search
 - [x] **Built-in 404** - Beautiful 404 error page
 - [x] **Pjax Support** - Smooth page transition experience
 
@@ -99,8 +99,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **Math Formulas** - Support for Mathjax and Katex
 
 ### 💬 Social Interaction
-- [x] **Multiple Comment Systems** - Disqus/Gitalk/Valine/Waline/Twikoo/Giscus/Artalk etc.
-- [x] **Dual Comments Support** - Enable two comment systems simultaneously
+- [x] **Comments** - Giscus comments with lazy loading and theme synchronization
 - [x] **Share Features** - Sharejs/Addtoany sharing components
 - [x] **Live Chat** - Chatra/Tidio/Crisp instant messaging
 

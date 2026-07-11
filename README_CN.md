@@ -89,7 +89,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **標籤外掛** - 豐富的標籤外掛支持
 
 ### 🔍 搜尋與導航
-- [x] **多種搜尋** - Algolia 搜尋 / 本地搜尋 / Docsearch
+- [x] **搜尋選項** - 本地搜尋 / Google 站內搜尋
 - [x] **內建 404** - 美觀的 404 錯誤頁面
 - [x] **Pjax 支援** - 流暢的頁面切換體驗
 
@@ -99,8 +99,7 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **數學公式** - 支援 Mathjax 和 Katex
 
 ### 💬 社交互動
-- [x] **多元評論系統** - Disqus/Gitalk/Valine/Waline/Twikoo/Giscus/Artalk 等
-- [x] **雙評論支援** - 可同時啟用兩套評論系統
+- [x] **評論系統** - 支援延遲載入與主題同步的 Giscus 評論
 - [x] **分享功能** - Sharejs/Addtoany 分享套件
 - [x] **線上客服** - Chatra/Tidio/Crisp 即時聊天
 

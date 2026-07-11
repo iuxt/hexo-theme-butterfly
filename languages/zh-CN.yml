@@ -13,8 +13,6 @@ page:
   category: 分类
   archives: 归档
 
-card_post_count: 条评论
-
 no_title: 无标题
 
 post:
@@ -24,7 +22,6 @@ post:
   min2read: 阅读时长
   min2read_unit: 分钟
   page_pv: 浏览量
-  comments: 评论数
   copyright:
     author: 文章作者
     link: 文章链接
@@ -39,9 +36,6 @@ search:
   title: 搜索
   load_data: 数据加载中
   input_placeholder: 搜索文章
-  algolia_search:
-    hits_empty: '未找到符合您查询的内容：${query}'
-    hits_stats: '找到 ${hits} 条结果，耗时 ${time} 毫秒'
   local_search:
     hits_empty: '未找到符合您查询的内容：${query}'
     hits_stats: '共找到 ${hits} 篇文章'
@@ -74,14 +68,6 @@ aside:
     site_uv_name: 本站访客数
     site_pv_name: 本站总浏览量
   more_button: 查看更多
-  card_newest_comments:
-    headline: 最新评论
-    loading_text: 加载中...
-    error: 无法获取评论，请确认相关配置是否正确
-    zero: 暂无评论
-    image: 图片
-    link: 链接
-    code: 代码
   card_toc: 目录
   card_post_series: 系列文章
 

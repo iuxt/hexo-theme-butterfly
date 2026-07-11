@@ -13,8 +13,6 @@ page:
   category: カテゴリ
   archives: アーカイブ
 
-card_post_count: コメント数
-
 no_title: タイトルなし
 
 post:
@@ -24,7 +22,6 @@ post:
   min2read: 読む時間
   min2read_unit: 分
   page_pv: 閲覧数
-  comments: コメント数
   copyright:
     author: 著者
     link: リンク
@@ -38,9 +35,6 @@ search:
   title: 検索
   load_data: データベースを読み込んでいます
   input_placeholder: 記事を検索
-  algolia_search:
-    hits_empty: '${query} の検索結果が見つかりませんでした。'
-    hits_stats: '${hits} 件の結果が ${time}ms で見つかりました'
   local_search:
     hits_empty: '${query} の検索結果が見つかりませんでした。'
     hits_stats: '${hits} 件の記事が見つかりました'
@@ -73,14 +67,6 @@ aside:
     site_uv_name: ユーザー数
     site_pv_name: ページビュー数
   more_button: もっと見る
-  card_newest_comments:
-    headline: 最新コメント
-    loading_text: ローディング中...
-    error: コメントを取得できませんでした。設定を確認してください。
-    zero: コメントがありません
-    image: 画像
-    link: リンク
-    code: コード
   card_toc: 目次
   card_post_series: シリーズ記事
 

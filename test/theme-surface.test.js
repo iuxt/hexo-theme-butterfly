@@ -35,3 +35,17 @@ test('comments expose only the Giscus implementation', () => {
   assert.match(loader, /comments\/giscus/)
   assert.doesNotMatch(loader, /\beach\b|\bcase\b/)
 })
+
+test('documentation describes the reduced provider surface', () => {
+  const readme = read('README.md')
+  assert.match(readme, /Local Search/)
+  assert.match(readme, /Google Site Search/)
+  assert.match(readme, /Giscus/)
+
+  for (const file of fs.readdirSync(path.join(root, 'languages'))) {
+    const language = read(`languages/${file}`)
+    const providerKeys = [...language.matchAll(/^  ([a-z_]+):\s*$/gm)].map(match => match[1])
+    assert.equal(providerKeys.includes('local_search'), true)
+    assert.equal(providerKeys.filter(key => key.endsWith('_search')).length, 1)
+  }
+})

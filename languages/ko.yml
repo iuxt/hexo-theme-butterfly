@@ -13,8 +13,6 @@ page:
   category: 카테고리
   archives: 아카이브
 
-card_post_count: 댓글 수
-
 no_title: 제목 없음
 
 post:
@@ -24,7 +22,6 @@ post:
   min2read: 읽기 시간
   min2read_unit: 분
   page_pv: 조회수
-  comments: 댓글
   copyright:
     author: 작성자
     link: 링크
@@ -38,9 +35,6 @@ search:
   title: 검색
   load_data: 데이터베이스 로드 중
   input_placeholder: 글 검색
-  algolia_search:
-    hits_empty: '${query}에 대한 결과를 찾을 수 없습니다.'
-    hits_stats: '${hits}개의 결과를 ${time}ms 만에 찾음'
   local_search:
     hits_empty: '${query}에 대한 결과를 찾을 수 없습니다.'
     hits_stats: '${hits}개의 글을 찾음'
@@ -73,14 +67,6 @@ aside:
     site_uv_name: 방문자 수
     site_pv_name: 총 조회수
   more_button: 더 보기
-  card_newest_comments:
-    headline: 최신 댓글
-    loading_text: 로딩 중...
-    error: 댓글을 가져올 수 없습니다. 설정을 확인해 주세요.
-    zero: 댓글 없음
-    image: 이미지
-    link: 링크
-    code: 코드
   card_toc: 목차
   card_post_series: 시리즈 글
 

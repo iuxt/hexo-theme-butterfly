@@ -13,8 +13,6 @@ page:
   category: 分類
   archives: 歸檔
 
-card_post_count: 條評論
-
 no_title: 無標題
 
 post:
@@ -24,7 +22,6 @@ post:
   min2read: 閱讀時間
   min2read_unit: 分鐘
   page_pv: 瀏覽量
-  comments: 評論數
   copyright:
     author: 文章作者
     link: 文章連結
@@ -38,9 +35,6 @@ search:
   title: 搜尋
   load_data: 正在加載數據庫
   input_placeholder: 搜尋文章
-  algolia_search:
-    hits_empty: '未找到相關內容：${query}'
-    hits_stats: '找到 ${hits} 條結果，耗時 ${time} 毫秒'
   local_search:
     hits_empty: '未找到相關內容：${query}'
     hits_stats: '找到 ${hits} 篇文章'
@@ -73,14 +67,6 @@ aside:
     site_uv_name: 訪客數
     site_pv_name: 總瀏覽量
   more_button: 查看更多
-  card_newest_comments:
-    headline: 最新評論
-    loading_text: 正在加載...
-    error: 無法取得評論，請確認配置是否正確
-    zero: 暫無評論
-    image: 圖片
-    link: 連結
-    code: 代碼
   card_toc: 目錄
   card_post_series: 系列文章
 

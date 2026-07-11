@@ -13,8 +13,6 @@ page:
   category: Category
   archives: Archives
 
-card_post_count: comments
-
 no_title: Untitled
 
 post:
@@ -24,7 +22,6 @@ post:
   min2read: Reading Time
   min2read_unit: mins
   page_pv: Post Views
-  comments: Comments
   copyright:
     author: Author
     link: Link
@@ -38,9 +35,6 @@ search:
   title: Search
   load_data: Loading Database
   input_placeholder: Search for Posts
-  algolia_search:
-    hits_empty: 'No results found for: ${query}'
-    hits_stats: '${hits} results found in ${time} ms'
   local_search:
     hits_empty: 'No results found for: ${query}'
     hits_stats: '${hits} articles found'
@@ -73,14 +67,6 @@ aside:
     site_uv_name: Unique Visitors
     site_pv_name: Page Views
   more_button: View More
-  card_newest_comments:
-    headline: Latest Comments
-    loading_text: Loading...
-    error: Unable to retrieve comments, please check the configuration
-    zero: No comments
-    image: Image
-    link: Link
-    code: Code
   card_toc: Contents
   card_post_series: Post Series
 
