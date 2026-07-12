@@ -71,10 +71,15 @@ test('comments have no theme surface', () => {
 
 test('documentation describes search without comments', () => {
   const readme = read('README.md')
+  const readmeCn = read('README_CN.md')
   assert.match(readme, /Local Search/)
   assert.match(readme, /Google Site Search/)
   assert.doesNotMatch(readme, /Giscus/)
-  assert.doesNotMatch(read('README_CN.md'), /Giscus/)
+  assert.doesNotMatch(readmeCn, /Giscus/)
+  assert.doesNotMatch(readme, /Busuanzi/i)
+  assert.doesNotMatch(readmeCn, /Busuanzi|不蒜子/i)
+  assert.doesNotMatch(readme, /Analytics\s*&\s*Statistics/i)
+  assert.doesNotMatch(readmeCn, /數據分析|数据分析/)
 
   for (const file of fs.readdirSync(path.join(root, 'languages'))) {
     const language = read(`languages/${file}`)

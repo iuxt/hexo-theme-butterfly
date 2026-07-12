@@ -101,9 +101,6 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 ### 💬 社交互動
 - [x] **分享功能** - Sharejs/Addtoany 分享套件
 
-### 📊 數據分析
-- [x] **訪問統計** - 不蒜子計數器
-
 ### 🎪 視覺效果
 - [x] **打字特效** - activate_power_mode 動畫
 - [x] **載入動畫** - Preloader 和 pace.js 進度條

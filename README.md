@@ -101,9 +101,6 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 ### 💬 Social Interaction
 - [x] **Share Features** - Sharejs/Addtoany sharing components
 
-### 📊 Analytics & Statistics
-- [x] **Visit Statistics** - Busuanzi counter
-
 ### 🎪 Visual Effects
 - [x] **Typing Effects** - activate_power_mode animations
 - [x] **Loading Animations** - Preloader and pace.js progress bars
