@@ -10,6 +10,15 @@ const read = file => fs.readFileSync(path.join(root, file), 'utf8')
 
 const caseValues = source => [...source.matchAll(/when\s+'([^']+)'/g)].map(match => match[1])
 
+test('footer links remain visible on hover', () => {
+  const footerStyles = read('source/css/_layout/footer.styl')
+  const hoverRule = footerStyles.match(/a\s+color: var\(--light-grey\)[\s\S]*?&:hover\s+([\s\S]*?)(?=\n\s{2}\.[\w-]+)/)
+
+  assert.ok(hoverRule, 'footer link hover rule')
+  assert.match(hoverRule[1], /text-decoration: underline/)
+  assert.doesNotMatch(hoverRule[1], /color: \$light-blue/)
+})
+
 test('search exposes only local and Google providers', () => {
   const dispatcher = read('layout/includes/third-party/search/index.pug')
   assert.deepEqual(caseValues(dispatcher), ['local_search', 'google_search'])
