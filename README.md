@@ -10,18 +10,18 @@
 
 A modern, elegant and feature-rich theme for Hexo
 
-![master version](https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/master?color=%231ab1ad&label=master)
-![dev version](https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/dev?label=dev)
+![master version](https://img.shields.io/github/package-json/v/iuxt/hexo-theme-butterfly/master?color=%231ab1ad&label=master)
+![dev version](https://img.shields.io/github/package-json/v/iuxt/hexo-theme-butterfly/dev?label=dev)
 ![npm version](https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff)
 ![hexo version](https://img.shields.io/badge/hexo-5.3.0+-0e83cd)
-![license](https://img.shields.io/github/license/jerryc127/hexo-theme-butterfly?color=FF5531)
-![GitHub stars](https://img.shields.io/github/stars/jerryc127/hexo-theme-butterfly?style=social)
+![license](https://img.shields.io/github/license/iuxt/hexo-theme-butterfly?color=FF5531)
+![GitHub stars](https://img.shields.io/github/stars/iuxt/hexo-theme-butterfly?style=social)
 
 📢 **Demo**: [Butterfly Official](https://butterfly.js.org/) | [CrazyWong's Blog](https://blog.crazywong.com/)
 
 📖 **Documentation**: [English Docs](https://butterfly.js.org/en/posts/butterfly-docs-en-get-started/) | [中文文档](https://butterfly.js.org/posts/21cfbf15/)
 
-![Butterfly Theme Preview](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png)
+![Butterfly Theme Preview](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/theme-butterfly-readme.png)
 
 </div>
 
@@ -39,12 +39,12 @@ Execute in your Hexo blog root directory:
 
 ```bash
 # Install stable version (recommended)
-git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+git clone -b master https://github.com/iuxt/hexo-theme-butterfly.git themes/butterfly
 ```
 
 ```bash
 # Install development version (early access to new features)
-git clone -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+git clone -b dev https://github.com/iuxt/hexo-theme-butterfly.git themes/butterfly
 ```
 
 #### Method 2: NPM Installation
@@ -119,26 +119,26 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 Thanks to all the developers who have contributed to the Butterfly theme!
 
-[![Contributors](https://contrib.rocks/image?repo=jerryc127/hexo-theme-butterfly)](https://github.com/jerryc127/hexo-theme-butterfly/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=iuxt/hexo-theme-butterfly)](https://github.com/iuxt/hexo-theme-butterfly/graphs/contributors)
 
 ## 📸 Screenshots
 
 <div align="center">
 
-![Theme Demo](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
+![Theme Demo](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
 
-![Theme Demo](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
+![Theme Demo](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
 
-![Theme Demo](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
+![Theme Demo](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
 
-![Theme Demo](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
+![Theme Demo](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
 
 </div>
 
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jerryc127/hexo-theme-butterfly&type=Date)](https://star-history.com/#jerryc127/hexo-theme-butterfly&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=iuxt/hexo-theme-butterfly&type=Date)](https://star-history.com/#iuxt/hexo-theme-butterfly&Date)
 
 ## 🤝 Building a Better Theme Together
 
@@ -146,8 +146,8 @@ We believe **the power of open source comes from everyone's participation**! Whe
 
 ### 💬 Get Help & Support
 
-- 🐛 **Found a bug?** → [GitHub Issues](https://github.com/jerryc127/hexo-theme-butterfly/issues) - Let's solve it together!
-- 💡 **Have ideas?** → [GitHub Discussions](https://github.com/jerryc127/hexo-theme-butterfly/discussions) - Share your creative ideas!
+- 🐛 **Found a bug?** → [GitHub Issues](https://github.com/iuxt/hexo-theme-butterfly/issues) - Let's solve it together!
+- 💡 **Have ideas?** → [GitHub Discussions](https://github.com/iuxt/hexo-theme-butterfly/discussions) - Share your creative ideas!
 - 📚 **Learning to use?** → [Official Documentation](https://butterfly.js.org/) - Detailed usage guide
 - 💬 **Real-time discussion?** → [Telegram Group](https://t.me/bu2fly) - Chat with community members
 

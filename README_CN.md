@@ -10,18 +10,18 @@
 
 一個適用於 Hexo 的現代化、美觀且功能豐富的主題
 
-![master version](https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/master?color=%231ab1ad&label=master)
-![dev version](https://img.shields.io/github/package-json/v/jerryc127/hexo-theme-butterfly/dev?label=dev)
+![master version](https://img.shields.io/github/package-json/v/iuxt/hexo-theme-butterfly/master?color=%231ab1ad&label=master)
+![dev version](https://img.shields.io/github/package-json/v/iuxt/hexo-theme-butterfly/dev?label=dev)
 ![npm version](https://img.shields.io/npm/v/hexo-theme-butterfly?color=%09%23bf00ff)
 ![hexo version](https://img.shields.io/badge/hexo-5.3.0+-0e83cd)
-![license](https://img.shields.io/github/license/jerryc127/hexo-theme-butterfly?color=FF5531)
-![GitHub stars](https://img.shields.io/github/stars/jerryc127/hexo-theme-butterfly?style=social)
+![license](https://img.shields.io/github/license/iuxt/hexo-theme-butterfly?color=FF5531)
+![GitHub stars](https://img.shields.io/github/stars/iuxt/hexo-theme-butterfly?style=social)
 
 📢 **在線預覽**: [Butterfly 官方](https://butterfly.js.org/) | [CrazyWong 博客](https://blog.crazywong.com/)
 
 📖 **完整文檔**: [中文文檔](https://butterfly.js.org/posts/21cfbf15/) | [English Docs](https://butterfly.js.org/en/posts/butterfly-docs-en-get-started/)
 
-![Butterfly 主題預覽](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/theme-butterfly-readme.png)
+![Butterfly 主題預覽](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/theme-butterfly-readme.png)
 
 </div>
 
@@ -39,12 +39,12 @@
 
 ```bash
 # 安裝穩定版本（推薦）
-git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+git clone -b master https://github.com/iuxt/hexo-theme-butterfly.git themes/butterfly
 ```
 
 ```bash
 # 安裝開發版本（搶先體驗新功能）
-git clone -b dev https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly
+git clone -b dev https://github.com/iuxt/hexo-theme-butterfly.git themes/butterfly
 ```
 
 #### 方式二：NPM 安裝
@@ -119,26 +119,26 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 感謝所有為 Butterfly 主題做出貢獻的開發者們！
 
-[![Contributors](https://contrib.rocks/image?repo=jerryc127/hexo-theme-butterfly)](https://github.com/jerryc127/hexo-theme-butterfly/graphs/contributors)
+[![Contributors](https://contrib.rocks/image?repo=iuxt/hexo-theme-butterfly)](https://github.com/iuxt/hexo-theme-butterfly/graphs/contributors)
 
 ## 📸 主題截圖
 
 <div align="center">
 
-![主題展示](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
+![主題展示](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-1.jpg)
 
-![主題展示](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
+![主題展示](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-2.jpg)
 
-![主題展示](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
+![主題展示](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-3.jpg)
 
-![主題展示](https://cdn.jsdelivr.net/gh/jerryc127/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
+![主題展示](https://cdn.jsdelivr.net/gh/iuxt/CDN@m2/img/butterfly-readme-screenshots-4.jpg)
 
 </div>
 
 
 ## ⭐ Star 趨勢
 
-[![Star History Chart](https://api.star-history.com/svg?repos=jerryc127/hexo-theme-butterfly&type=Date)](https://star-history.com/#jerryc127/hexo-theme-butterfly&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=iuxt/hexo-theme-butterfly&type=Date)](https://star-history.com/#iuxt/hexo-theme-butterfly&Date)
 
 ## 🤝 一起構建更美好的主題
 
@@ -146,8 +146,8 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 ### 💬 獲取幫助與支援
 
-- 🐛 **發現問題？** → [GitHub Issues](https://github.com/jerryc127/hexo-theme-butterfly/issues) - 讓我們一起解決！
-- 💡 **有好想法？** → [GitHub Discussions](https://github.com/jerryc127/hexo-theme-butterfly/discussions) - 分享您的創意想法！
+- 🐛 **發現問題？** → [GitHub Issues](https://github.com/iuxt/hexo-theme-butterfly/issues) - 讓我們一起解決！
+- 💡 **有好想法？** → [GitHub Discussions](https://github.com/iuxt/hexo-theme-butterfly/discussions) - 分享您的創意想法！
 - 📚 **學習使用？** → [官方文檔](https://butterfly.js.org/) - 詳細的使用指南
 - 💬 **即時討論？** → [Telegram 群組](https://t.me/bu2fly) - 與社群成員實時交流
 
