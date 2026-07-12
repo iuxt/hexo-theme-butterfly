@@ -21,26 +21,60 @@ test('search exposes only local and Google providers', () => {
   assert.match(googleTemplate, /\.trim\(\)/)
 })
 
-test('comments expose only the Giscus implementation', () => {
-  const commentsDir = path.join(root, 'layout/includes/third-party/comments')
-  assert.deepEqual(fs.readdirSync(commentsDir).sort(), ['giscus.pug', 'index.pug', 'js.pug'])
-  assert.equal(fs.existsSync(path.join(root, 'layout/includes/third-party/card-post-count')), false)
-  assert.equal(fs.existsSync(path.join(root, 'layout/includes/third-party/newest-comments')), false)
+test('comments have no theme surface', () => {
+  const removedPaths = [
+    'layout/includes/third-party/comments',
+    'source/css/_layout/comments.styl'
+  ]
+  for (const file of removedPaths) {
+    assert.equal(fs.existsSync(path.join(root, file)), false, file)
+  }
 
-  const container = read('layout/includes/third-party/comments/index.pug')
-  assert.match(container, /#giscus-wrap/)
-  assert.doesNotMatch(container, /\beach\b|\bcase\b/)
+  for (const file of ['_config.yml', 'scripts/common/default_config.js']) {
+    const source = read(file)
+    assert.doesNotMatch(source, /^\s*comments:/m, `${file}: comments`)
+    assert.doesNotMatch(source, /^\s*giscus:/m, `${file}: giscus`)
+  }
 
-  const loader = read('layout/includes/third-party/comments/js.pug')
-  assert.match(loader, /comments\/giscus/)
-  assert.doesNotMatch(loader, /\beach\b|\bcase\b/)
+  const runtimeFiles = [
+    'layout/post.pug',
+    'layout/page.pug',
+    'layout/includes/page/shuoshuo.pug',
+    'layout/includes/rightside.pug',
+    'layout/includes/additional-js.pug',
+    'layout/includes/third-party/pjax.pug',
+    'scripts/events/init.js',
+    'scripts/events/404.js',
+    'source/js/utils.js',
+    'source/css/var.styl',
+    'source/css/_mode/darkmode.styl',
+    'source/css/_layout/aside.styl',
+    'source/css/_page/shuoshuo.styl'
+  ]
+  const runtime = runtimeFiles.map(read).join('\n')
+  for (const pattern of [
+    /theme\.comments/,
+    /commentsJsLoad/,
+    /post-comment/,
+    /to_comment/,
+    /loadComment/,
+    /shuoshuo-comment/,
+    /giscus/i
+  ]) assert.doesNotMatch(runtime, pattern)
+
+  for (const file of fs.readdirSync(path.join(root, 'languages'))) {
+    const language = read(`languages/${file}`)
+    assert.doesNotMatch(language, /^comment:/m, file)
+    assert.doesNotMatch(language, /^\s+scroll_to_comment:/m, file)
+  }
 })
 
-test('documentation describes the reduced provider surface', () => {
+test('documentation describes search without comments', () => {
   const readme = read('README.md')
   assert.match(readme, /Local Search/)
   assert.match(readme, /Google Site Search/)
-  assert.match(readme, /Giscus/)
+  assert.doesNotMatch(readme, /Giscus/)
+  assert.doesNotMatch(read('README_CN.md'), /Giscus/)
 
   for (const file of fs.readdirSync(path.join(root, 'languages'))) {
     const language = read(`languages/${file}`)

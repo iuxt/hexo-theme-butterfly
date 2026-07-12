@@ -44,26 +44,9 @@ function loadDefaultConfig () {
   return cachedDefaultConfig
 }
 
-/**
- * Process comment system configuration
- */
-function processCommentConfig (themeConfig) {
-  const { comments } = themeConfig
-  if (!comments || !comments.use) {
-    return
-  }
-
-  const use = Array.isArray(comments.use) ? comments.use : [comments.use]
-  themeConfig.comments.use = use.some(item => typeof item === 'string' && item.trim().toLowerCase() === 'giscus')
-    ? ['Giscus']
-    : []
-}
-
 hexo.extend.filter.register('before_generate', () => {
   checkHexoEnvironment(hexo)
 
   const defaultConfig = loadDefaultConfig()
   hexo.theme.config = deepMerge(defaultConfig, hexo.theme.config)
-
-  processCommentConfig(hexo.theme.config)
 }, 1)

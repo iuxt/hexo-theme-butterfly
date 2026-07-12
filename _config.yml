@@ -389,13 +389,13 @@ darkmode:
 rightside_scroll_percent: false
 
 # Don't modify the following settings unless you know how they work
-# Choose: readmode,translate,darkmode,hideAside,toc,comment
+# Choose: readmode,translate,darkmode,hideAside,toc
 # Don't repeat the same value
 rightside_item_order:
   enable: false
   # Default: readmode,translate,darkmode,hideAside
   hide:
-  # Default: toc,comment
+  # Default: toc
   show:
 
 # Animation for the bottom right config button
@@ -503,30 +503,6 @@ share:
   # https://www.addtoany.com/
   addtoany:
     item: facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link
-
-# --------------------------------------
-# Comments System
-# --------------------------------------
-
-comments:
-  # Leave it empty if you don't need comments
-  # Choose: Giscus
-  use:
-  # Display the comment provider name
-  text: true
-  # Lazyload: The comment system will be load when comment element enters the browser's viewport.
-  lazyload: false
-
-# Giscus
-# https://giscus.app/
-giscus:
-  repo:
-  repo_id:
-  category_id:
-  light_theme: light
-  dark_theme: dark
-  js:
-  option:
 
 # --------------------------------------
 # Beautify / Effect
@@ -765,7 +741,6 @@ CDN:
     # busuanzi:
     # egjs_infinitegrid:
     # fontawesome:
-    # giscus:
     # instantpage:
     # katex:
     # katex_copytex:

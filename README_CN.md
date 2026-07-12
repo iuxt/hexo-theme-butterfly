@@ -99,7 +99,6 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **數學公式** - 支援 Mathjax 和 Katex
 
 ### 💬 社交互動
-- [x] **評論系統** - 支援延遲載入與主題同步的 Giscus 評論
 - [x] **分享功能** - Sharejs/Addtoany 分享套件
 
 ### 📊 數據分析

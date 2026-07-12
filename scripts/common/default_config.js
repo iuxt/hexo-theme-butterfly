@@ -281,20 +281,6 @@ module.exports = {
       item: 'facebook,x,wechat,sina_weibo,facebook_messenger,email,copy_link'
     }
   },
-  comments: {
-    use: null,
-    text: true,
-    lazyload: false
-  },
-  giscus: {
-    repo: null,
-    repo_id: null,
-    category_id: null,
-    light_theme: 'light',
-    dark_theme: 'dark',
-    js: null,
-    option: null
-  },
   category_ui: null,
   tag_ui: null,
   rounded_corners_ui: true,

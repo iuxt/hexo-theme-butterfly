@@ -99,7 +99,6 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 - [x] **Math Formulas** - Support for Mathjax and Katex
 
 ### 💬 Social Interaction
-- [x] **Comments** - Giscus comments with lazy loading and theme synchronization
 - [x] **Share Features** - Sharejs/Addtoany sharing components
 
 ### 📊 Analytics & Statistics

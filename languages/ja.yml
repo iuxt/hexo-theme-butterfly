@@ -44,8 +44,6 @@ pagination:
   next: 次へ
   page_info: '${current} ページ / 合計 ${total} ページ'
 
-comment: コメント
-
 aside:
   articles: 記事
   tags: タグ
@@ -86,7 +84,6 @@ rightside:
   night_mode_title: ライトモード/ダークモード切り替え
   back_to_top: トップに戻る
   toc: 目次
-  scroll_to_comment: コメントへ移動
   setting: 設定
   aside: シングルカラムとダブルカラムの切り替え
 

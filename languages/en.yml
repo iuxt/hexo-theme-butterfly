@@ -44,8 +44,6 @@ pagination:
   next: Next
   page_info: 'Page ${current} of ${total}'
 
-comment: Comments
-
 aside:
   articles: Articles
   tags: Tags
@@ -86,7 +84,6 @@ rightside:
   night_mode_title: Toggle Between Light and Dark Mode
   back_to_top: Back to Top
   toc: Table of Contents
-  scroll_to_comment: Scroll to Comments
   setting: Settings
   aside: Toggle Between Single-column and Double-column
 

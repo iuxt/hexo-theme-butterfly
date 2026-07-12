@@ -13,7 +13,6 @@ hexo.extend.generator.register('404', function (locals) {
     data: {
       type: '404',
       top_img: false,
-      comments: false,
       aside: false
     }
   }

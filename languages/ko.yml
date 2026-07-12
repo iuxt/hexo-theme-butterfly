@@ -44,8 +44,6 @@ pagination:
   next: 다음
   page_info: '${current} 페이지 / 총 ${total} 페이지'
 
-comment: 댓글
-
 aside:
   articles: 글
   tags: 태그
@@ -86,7 +84,6 @@ rightside:
   night_mode_title: 라이트/다크 모드 전환
   back_to_top: 맨 위로
   toc: 목차
-  scroll_to_comment: 댓글로 이동
   setting: 설정
   aside: 단일/이중 열 전환
 

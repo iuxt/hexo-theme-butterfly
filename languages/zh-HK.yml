@@ -44,8 +44,6 @@ pagination:
   next: 下一頁
   page_info: '第 ${current} 頁 / 共 ${total} 頁'
 
-comment: 評論
-
 aside:
   articles: 文章
   tags: 標籤
@@ -86,7 +84,6 @@ rightside:
   night_mode_title: 切換日夜模式
   back_to_top: 回到頂部
   toc: 目錄
-  scroll_to_comment: 前往評論
   setting: 設定
   aside: 單欄與雙欄切換
 

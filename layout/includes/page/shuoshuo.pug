@@ -10,39 +10,6 @@
 
 #article-container
   if page.shuoshuo_url || (site.data.shuoshuo && site.data.shuoshuo.length)
-    if page.comments !== false && theme.comments.use
-      - commentsJsLoad = true
-
-      script.
-        (() => {
-          const commentDiv = `!{partial('includes/third-party/comments/index', {}, {cache: true})}`
-
-          const runDestroy = (shuoshuoComment) => {
-            if (!shuoshuoComment) return
-
-            for (const [key, fn] of Object.entries(shuoshuoComment)) {
-              if (key.startsWith('destroy')) fn()
-            }
-          }
-
-          window.addCommentToShuoshuo = e => {
-            const btn = e.target.closest('.shuoshuo-comment-btn')
-            if (!btn) return
-
-            const ele = btn.closest('.container').nextElementSibling
-            const { shuoshuoComment } = window
-            const isInclude = ele.classList.contains('no-comment')
-            runDestroy(shuoshuoComment)
-            if (isInclude) {
-              ele.classList.remove('no-comment')
-              ele.innerHTML = commentDiv
-              const key = `${location.pathname.replace(/\/$/, '')}?key=${ele.getAttribute('data-key')}`
-              shuoshuoComment.loadComment && shuoshuoComment.loadComment(ele, key)
-            }
-          }
-        })()
-
-
     - const localDate = page.shuoshuo_url ? [] : shuoshuoFN(site.data.shuoshuo, page)
 
     if !page.shuoshuo_url
@@ -124,14 +91,6 @@
           const content = dataSlice.map(item => {
             const formattedDate = formatToTimeZone(item.date)
             const tags = item.tags && item.tags.map(tag => `<span class="shuoshuo-tag">${tag}</span>`).join('') || ''
-            const commentButton = item.key && !{commentsJsLoad}
-              ? `<div class="shuoshuo-comment-btn" onclick="addCommentToShuoshuo(event)">
-                  <i class="fa-solid fa-comments"></i>
-                </div>`
-              : ''
-            const commentContainer = item.key
-              ? `<div class="shuoshuo-comment no-comment" data-key="${item.key}"></div>`
-              : ''
 
             return `
               <div class="shuoshuo-item">
@@ -148,12 +107,8 @@
                     </div>
                   </div>
                   <div class="shuoshuo-content">${addLazyload(item.content)}</div>
-                  <div class="shuoshuo-footer ${tags ? 'flex-between' : 'flex-end'}">
-                    ${tags ? `<div class="shuoshuo-tags">${tags}</div>` : ''}
-                    ${commentButton}
-                  </div>
+                  ${tags ? `<div class="shuoshuo-footer flex-start"><div class="shuoshuo-tags">${tags}</div></div>` : ''}
                 </div>
-                ${commentContainer}
               </div>`
           }).join('')
 

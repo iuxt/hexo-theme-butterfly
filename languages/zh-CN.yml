@@ -45,8 +45,6 @@ pagination:
   next: 下一篇
   page_info: '第 ${current} 页 / 共 ${total} 页'
 
-comment: 评论
-
 aside:
   articles: 文章
   tags: 标签
@@ -87,7 +85,6 @@ rightside:
   night_mode_title: 日间和夜间模式切换
   back_to_top: 回到顶部
   toc: 目录
-  scroll_to_comment: 前往评论
   setting: 设置
   aside: 单栏和双栏切换
 
