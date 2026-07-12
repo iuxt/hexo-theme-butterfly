@@ -420,22 +420,6 @@ copy:
     enable: false
     limit_count: 150
 
-# Need to install the hexo-wordcount plugin
-wordcount:
-  enable: false
-  # Display the word count of the article in post meta
-  post_wordcount: true
-  # Display the time to read the article in post meta
-  min2read: true
-  # Display the total word count of the website in aside's webinfo
-  total_wordcount: true
-
-# Busuanzi count for PV / UV in site
-busuanzi:
-  site_uv: true
-  site_pv: true
-  page_pv: true
-
 # --------------------------------------
 # Math
 # --------------------------------------
@@ -738,7 +722,6 @@ CDN:
     # aplayer_css:
     # aplayer_js:
     # blueimp_md5:
-    # busuanzi:
     # egjs_infinitegrid:
     # fontawesome:
     # instantpage:

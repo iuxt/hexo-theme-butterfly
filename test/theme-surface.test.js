@@ -169,6 +169,42 @@ test('removed optional integrations have no theme surface', () => {
     /chat-btn/
   ]
   for (const pattern of removedRuntimePatterns) assert.doesNotMatch(runtime, pattern)
+})
 
-  assert.match(read('scripts/common/default_config.js'), /busuanzi/)
+test('word and visit statistics have no theme surface', () => {
+  for (const file of ['_config.yml', 'scripts/common/default_config.js']) {
+    const source = read(file)
+    assert.doesNotMatch(source, /^\s*wordcount:/m, `${file}: wordcount`)
+    assert.doesNotMatch(source, /^\s*busuanzi:/m, `${file}: busuanzi`)
+  }
+
+  const runtimeFiles = [
+    'layout/includes/header/post-info.pug',
+    'layout/includes/widget/card_webinfo.pug',
+    'layout/includes/additional-js.pug',
+    'layout/includes/head/preconnect.pug',
+    'plugins.yml'
+  ]
+  const runtime = runtimeFiles.map(read).join('\n')
+  for (const pattern of [
+    /wordcount/i,
+    /min2read/i,
+    /busuanzi/i,
+    /page_pv/,
+    /site_uv/,
+    /site_pv/
+  ]) assert.doesNotMatch(runtime, pattern)
+
+  for (const file of fs.readdirSync(path.join(root, 'languages'))) {
+    const language = read(`languages/${file}`)
+    for (const key of [
+      'wordcount',
+      'min2read',
+      'min2read_unit',
+      'page_pv',
+      'site_wordcount',
+      'site_uv_name',
+      'site_pv_name'
+    ]) assert.doesNotMatch(language, new RegExp(`^\\s+${key}:`, 'm'), `${file}: ${key}`)
+  }
 })

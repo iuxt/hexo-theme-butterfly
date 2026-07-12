@@ -235,17 +235,6 @@ module.exports = {
       limit_count: 150
     }
   },
-  wordcount: {
-    enable: false,
-    post_wordcount: true,
-    min2read: true,
-    total_wordcount: true
-  },
-  busuanzi: {
-    site_uv: true,
-    site_pv: true,
-    page_pv: true
-  },
   math: {
     use: null,
     per_page: true,

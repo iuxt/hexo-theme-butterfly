@@ -18,10 +18,6 @@ no_title: 无标题
 post:
   created: 发表于
   updated: 更新于
-  wordcount: 总字数
-  min2read: 阅读时长
-  min2read_unit: 分钟
-  page_pv: 浏览量
   copyright:
     author: 文章作者
     link: 文章链接
@@ -62,9 +58,6 @@ aside:
       unit: 天
     last_push_date:
       name: 最后更新时间
-    site_wordcount: 本站总字数
-    site_uv_name: 本站访客数
-    site_pv_name: 本站总浏览量
   more_button: 查看更多
   card_toc: 目录
   card_post_series: 系列文章

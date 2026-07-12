@@ -33,36 +33,3 @@
             a(href=url_for(item.path)).post-meta-categories #[=item.name]
             if index < page.categories.data.length - 1
               i.fas.fa-angle-right.post-meta-separator
-
-    .meta-secondline
-      - let postWordcount = theme.wordcount.enable && (theme.wordcount.post_wordcount || theme.wordcount.min2read)
-      if postWordcount
-        span.post-meta-separator |
-        span.post-meta-wordcount
-          if theme.wordcount.post_wordcount
-            i.far.fa-file-word.fa-fw.post-meta-icon
-            span.post-meta-label= _p('post.wordcount') + ':'
-            span.word-count= wordcount(page.content)
-            if theme.wordcount.min2read
-              span.post-meta-separator |
-          if theme.wordcount.min2read
-            i.far.fa-clock.fa-fw.post-meta-icon
-            span.post-meta-label= _p('post.min2read') + ':'
-            span= min2read(page.content, {cn: 350, en: 160}) + _p('post.min2read_unit')
-
-      //- for pv and count
-      mixin pvBlock(parent_id, parent_class, parent_title)
-        span.post-meta-separator |
-        span(class=parent_class id=parent_id data-flag-title=parent_title)
-          i.far.fa-eye.fa-fw.post-meta-icon
-          span.post-meta-label= _p('post.page_pv') + ':'
-          if block
-            block
-
-      mixin otherPV()
-        if theme.busuanzi.page_pv
-          +pvBlock('', 'post-meta-pv-cv', '')
-            span#busuanzi_value_page_pv
-              i.fa-solid.fa-spinner.fa-spin
-
-      +otherPV()
