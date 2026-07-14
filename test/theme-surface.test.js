@@ -120,7 +120,6 @@ test('removed optional integrations have no theme surface', () => {
     'chartjs',
     'snackbar',
     'abcjs',
-    'lightbox',
     'canvas_fluttering_ribbon',
     'canvas_nest',
     'fireworks',
@@ -163,7 +162,6 @@ test('removed optional integrations have no theme surface', () => {
     /chartjs/i,
     /snackbar/i,
     /abcjs/i,
-    /lightbox/i,
     /canvas_fluttering_ribbon/,
     /canvas_nest/,
     /fireworks/,
@@ -183,6 +181,29 @@ test('removed optional integrations have no theme surface', () => {
     /chat-btn/
   ]
   for (const pattern of removedRuntimePatterns) assert.doesNotMatch(runtime, pattern)
+})
+
+test('Fancybox is the only restored lightbox provider', () => {
+  const themeConfig = read('_config.yml')
+  const defaults = read('scripts/common/default_config.js')
+  const plugins = read('plugins.yml')
+  const browserConfig = read('layout/includes/head/config.pug')
+  const head = read('layout/includes/head.pug')
+  const scripts = read('layout/includes/additional-js.pug')
+  const styles = read('source/css/_layout/third-party.styl')
+
+  assert.match(themeConfig, /^# Choose: fancybox\n# Leave it empty if you don't need lightbox\nlightbox:\s*$/m)
+  assert.match(defaults, /^\s{2}lightbox: null,$/m)
+  assert.match(browserConfig, /lightbox: '!\{ theme\.lightbox \|\| 'null' \}'/)
+
+  assert.match(plugins, /^fancybox:\n\s+name: '@fancyapps\/ui'\n\s+file: dist\/fancybox\/fancybox\.umd\.js\n\s+version: 6\.1\.9\n\s+other_name: fancyapps-ui$/m)
+  assert.match(plugins, /^fancybox_css:\n\s+name: '@fancyapps\/ui'\n\s+file: dist\/fancybox\/fancybox\.css\n\s+version: 6\.1\.9\n\s+other_name: fancyapps-ui$/m)
+  assert.match(head, /if theme\.lightbox === 'fancybox'[\s\S]*theme\.asset\.fancybox_css/)
+  assert.match(scripts, /if theme\.lightbox === 'fancybox'[\s\S]*theme\.asset\.fancybox/)
+  assert.match(styles, /\.fancybox__toolbar__column\.is-middle/)
+
+  const lightboxSurface = [themeConfig, defaults, plugins, browserConfig, head, scripts, styles].join('\n')
+  assert.doesNotMatch(lightboxSurface, /medium_zoom|medium-zoom|mediumZoom/)
 })
 
 test('word and visit statistics have no theme surface', () => {

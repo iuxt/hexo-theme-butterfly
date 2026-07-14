@@ -228,6 +228,7 @@ module.exports = {
     click_to_scroll: false
   },
   photofigcaption: false,
+  lightbox: null,
   copy: {
     enable: true,
     copyright: {

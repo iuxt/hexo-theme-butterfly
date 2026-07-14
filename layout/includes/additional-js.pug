@@ -5,6 +5,9 @@ div
   if theme.translate.enable
     script(src=url_for(theme.asset.translate))
 
+  if theme.lightbox === 'fancybox'
+    script(src=url_for(theme.asset.fancybox))
+
   if theme.instantpage
     script(src=url_for(theme.asset.instantpage), type='module')
 

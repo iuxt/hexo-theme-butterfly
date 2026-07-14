@@ -19,6 +19,16 @@ egjs_infinitegrid:
   other_name: egjs-infinitegrid
   file: dist/infinitegrid.min.js
   version: 4.13.0
+fancybox:
+  name: '@fancyapps/ui'
+  file: dist/fancybox/fancybox.umd.js
+  version: 6.1.9
+  other_name: fancyapps-ui
+fancybox_css:
+  name: '@fancyapps/ui'
+  file: dist/fancybox/fancybox.css
+  version: 6.1.9
+  other_name: fancyapps-ui
 fontawesome:
   name: '@fortawesome/fontawesome-free'
   file: css/all.min.css

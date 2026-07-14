@@ -48,6 +48,9 @@ if (theme.pwa && theme.pwa.enable)
 link(rel='stylesheet', href=url_for(theme.asset.main_css))
 link(rel='stylesheet', href=url_for(theme.asset.fontawesome))
 
+if theme.lightbox === 'fancybox'
+  link(rel='stylesheet' href=url_for(theme.asset.fancybox_css) media="print" onload="this.media='all'")
+
 !=fragment_cache('injectHeadJs', function(){return inject_head_js()})
 
 //- font

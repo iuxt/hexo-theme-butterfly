@@ -413,6 +413,11 @@ anchor:
 
 photofigcaption: false
 
+# Lightbox
+# Choose: fancybox
+# Leave it empty if you don't need lightbox
+lightbox:
+
 copy:
   enable: true
   # Add the copyright information after copied content
