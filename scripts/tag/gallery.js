@@ -62,7 +62,7 @@ const galleryGroup = args => {
   const [name = '', descr = '', url = '', img = ''] = args.map(arg => arg.trim())
 
   return `<figure class="gallery-group">
-    <img class="gallery-group-img" src='${urlFor(img)}' alt="Group Image Gallery">
+    <img class="gallery-group-img no-lightbox" src='${urlFor(img)}' alt="Group Image Gallery">
     <figcaption>
       <div class="gallery-group-name">${name}</div>
       <p>${descr}</p>

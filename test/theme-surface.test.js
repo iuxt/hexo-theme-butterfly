@@ -206,6 +206,36 @@ test('Fancybox is the only restored lightbox provider', () => {
   assert.doesNotMatch(lightboxSurface, /medium_zoom|medium-zoom|mediumZoom/)
 })
 
+test('Fancybox binds eligible article and dynamic gallery images', () => {
+  const utils = read('source/js/utils.js')
+  const main = read('source/js/main.js')
+  const galleryTag = read('scripts/tag/gallery.js')
+  const flinkTag = read('scripts/tag/flink.js')
+  const flinkPage = read('layout/includes/page/flink.pug')
+  const shuoshuo = read('layout/includes/page/shuoshuo.pug')
+
+  assert.match(utils, /loadLightbox: elements =>/)
+  assert.match(utils, /GLOBAL_CONFIG\.lightbox !== 'fancybox'/)
+  assert.match(utils, /typeof Fancybox === 'undefined'/)
+  assert.match(utils, /image\.closest\('a'\)/)
+  assert.match(utils, /image\.classList\.contains\('no-lightbox'\)/)
+  assert.match(utils, /image\.dataset\.lazySrc \|\| image\.src/)
+  assert.match(utils, /'data-fancybox': 'gallery'/)
+  assert.match(utils, /Fancybox\.bind\('\[data-fancybox="gallery"\]'/)
+  assert.match(utils, /window\.fancyboxRun = true/)
+
+  assert.match(main, /const runLightbox = \(\) =>[\s\S]*#article-container img:not\(\.no-lightbox\)/)
+  assert.match(main, /handleRenderComplete[\s\S]*btf\.loadLightbox\(container\.querySelectorAll\('img:not\(\.no-lightbox\)'\)\)/)
+  assert.match(main, /addJustifiedGallery\(document\.querySelectorAll\('#article-container \.gallery-container'\)\)\n\s+runLightbox\(\)/)
+  assert.match(shuoshuo, /window\.lazyLoadInstance[\s\S]*btf\.loadLightbox\(document\.querySelectorAll\('#article-container img:not\(\.no-lightbox\)'\)\)/)
+
+  for (const source of [galleryTag, flinkTag, flinkPage, shuoshuo]) {
+    assert.match(source, /no-lightbox/)
+  }
+
+  assert.doesNotMatch([utils, main].join('\n'), /medium_zoom|medium-zoom|mediumZoom|medium-zoom-image/)
+})
+
 test('word and visit statistics have no theme surface', () => {
   for (const file of ['_config.yml', 'scripts/common/default_config.js']) {
     const source = read(file)
