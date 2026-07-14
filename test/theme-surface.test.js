@@ -192,12 +192,12 @@ test('Fancybox is the only restored lightbox provider', () => {
   const scripts = read('layout/includes/additional-js.pug')
   const styles = read('source/css/_layout/third-party.styl')
 
-  assert.match(themeConfig, /^# Choose: fancybox\n# Leave it empty if you don't need lightbox\nlightbox:\s*$/m)
+  assert.match(themeConfig, /^# Choose: fancybox\r?\n# Leave it empty if you don't need lightbox\r?\nlightbox:\s*$/m)
   assert.match(defaults, /^\s{2}lightbox: null,$/m)
   assert.match(browserConfig, /lightbox: '!\{ theme\.lightbox \|\| 'null' \}'/)
 
-  assert.match(plugins, /^fancybox:\n\s+name: '@fancyapps\/ui'\n\s+file: dist\/fancybox\/fancybox\.umd\.js\n\s+version: 6\.1\.9\n\s+other_name: fancyapps-ui$/m)
-  assert.match(plugins, /^fancybox_css:\n\s+name: '@fancyapps\/ui'\n\s+file: dist\/fancybox\/fancybox\.css\n\s+version: 6\.1\.9\n\s+other_name: fancyapps-ui$/m)
+  assert.match(plugins, /^fancybox:\r?\n\s+name: '@fancyapps\/ui'\r?\n\s+file: dist\/fancybox\/fancybox\.umd\.js\r?\n\s+version: 6\.1\.9\r?\n\s+other_name: fancyapps-ui$/m)
+  assert.match(plugins, /^fancybox_css:\r?\n\s+name: '@fancyapps\/ui'\r?\n\s+file: dist\/fancybox\/fancybox\.css\r?\n\s+version: 6\.1\.9\r?\n\s+other_name: fancyapps-ui$/m)
   assert.match(head, /if theme\.lightbox === 'fancybox'[\s\S]*theme\.asset\.fancybox_css/)
   assert.match(scripts, /if theme\.lightbox === 'fancybox'[\s\S]*theme\.asset\.fancybox/)
   assert.match(styles, /\.fancybox__toolbar__column\.is-middle/)
@@ -226,7 +226,10 @@ test('Fancybox binds eligible article and dynamic gallery images', () => {
 
   assert.match(main, /const runLightbox = \(\) =>[\s\S]*#article-container img:not\(\.no-lightbox\)/)
   assert.match(main, /handleRenderComplete[\s\S]*btf\.loadLightbox\(container\.querySelectorAll\('img:not\(\.no-lightbox\)'\)\)/)
-  assert.match(main, /addJustifiedGallery\(document\.querySelectorAll\('#article-container \.gallery-container'\)\)\n\s+runLightbox\(\)/)
+  assert.match(main, /addJustifiedGallery\(document\.querySelectorAll\('#article-container \.gallery-container'\)\)\r?\n\s+runLightbox\(\)/)
+  assert.match(main, /const refreshFn = \(\) => \{[\s\S]*?\r?\n\s+forPostFn\(\)\r?\n\s+openMobileMenu\(\)/)
+  assert.match(main, /btf\.addGlobalFn\('pjaxComplete', refreshFn, 'refreshFn'\)/)
+  assert.match(main, /window\.addEventListener\('hexo-blog-decrypt', e => \{\r?\n\s+forPostFn\(\)/)
   assert.match(shuoshuo, /window\.lazyLoadInstance[\s\S]*btf\.loadLightbox\(document\.querySelectorAll\('#article-container img:not\(\.no-lightbox\)'\)\)/)
 
   for (const source of [galleryTag, flinkTag, flinkPage, shuoshuo]) {
