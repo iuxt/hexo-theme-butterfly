@@ -5,7 +5,11 @@ const { stripHTML, truncate } = require('hexo-util')
 // Truncates the given content to a specified length, removing HTML tags and replacing newlines with spaces.
 const truncateContent = (content, length, encrypt = false) => {
   if (!content || encrypt) return ''
-  return truncate(stripHTML(content).replace(/\n/g, ' '), { length })
+  // 先剔除代码块, 避免 highlight 行号(1234…)与代码内容混入首页摘要
+  const withoutCode = content
+    .replace(/<figure class="highlight[\s\S]*?<\/figure>/gi, '')
+    .replace(/<pre[\s\S]*?<\/pre>/gi, '')
+  return truncate(stripHTML(withoutCode).replace(/\n/g, ' '), { length })
 }
 
 // Generates a post description based on the provided data and theme configuration.
